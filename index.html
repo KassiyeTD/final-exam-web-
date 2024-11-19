@@ -1,121 +1,192 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Казахское Ханство</title>
-    <!-- Подключение Bootstrap CSS -->
+    <title>Kazakh Khanate</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Встроенный CSS -->
+    <!-- Inline CSS -->
     <style>
-        /* Общие стили */
+        /* General styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .navbar-brand {
+
+        /* Updated navigation bar */
+        .navbar {
+            font-size: 1.4em; /* Increased font size */
+            padding: 1.5em 1em; /* Increased padding */
+            background-color: #f8e9c1; /* Warm beige background */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #004e89 !important; /* Dark teal text */
+            font-family: 'Raleway', sans-serif; /* Modern sans-serif font */
             font-weight: bold;
         }
-        .nav-link {
-            font-size: 1.1em;
+        .nav-link:hover {
+            color: #b28f00 !important; /* Golden hue on hover */
         }
+        .navbar-toggler {
+            border-color: #004e89; /* Dark teal for toggler */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23004e89' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Teal icon */
+        }
+
+        /* Hero Section */
         .jumbotron {
-            background: url('images/background.jpg') no-repeat center center;
+            background-color: #f8e9c1; /* Warm beige background */
+            padding: 6rem 2rem; /* Increased padding */
+            margin-bottom: 0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .jumbotron h1 {
+            font-size: clamp(3rem, 6vw, 5rem); /* Larger font size */
+            line-height: 1.2;
+            color: #004e89; /* Dark teal text */
+        }
+        .jumbotron p {
+            color: #6b6a5e; /* Muted gray text */
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+        .jumbotron .btn {
+            background-color: #004e89; /* Dark teal button */
+            color: white;
+            font-size: 1.3rem; /* Larger button */
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .jumbotron .btn:hover {
+            background-color: #002f5d; /* Darker teal on hover */
+        }
+        .jumbotron img {
+            max-width: 550px; /* Larger image */
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Site Sections */
+        .site-sections {
+            background: url('images/back.jpg') no-repeat center center;
             background-size: cover;
             color: white;
-            height: 500px;
-            position: relative;
-            margin-bottom: 0;
+            padding: 50px 0;
         }
-        .jumbotron .container {
-            position: absolute;
-            bottom: 50px;
-            left: 50px;
+        .site-sections h2 {
+            color: #ffc72c;
         }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
+        .site-sections .card {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 10px;
+        }
+        .site-sections .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        footer {
+            background-color: #004e89;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<!-- Навигационная панель -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Казахское Ханство</a>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img src="images/kazakh .jpg" alt="Icon" width="50" height="50" class="d-inline-block align-top">
+        Kazakh Khanate
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">Главная</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="history.html">История</a>
+                <a class="nav-link" href="history.html">History</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="khans.html">Ханы</a>
+                <a class="nav-link" href="khans.html">Khans</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="governance.html">Управление</a>
+                <a class="nav-link" href="governance.html">Governance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="quiz.html">Викторина</a>
+                <a class="nav-link" href="quiz.html">Quiz</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<!-- Jumbotron -->
+<!-- Hero Section -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Добро пожаловать в Казахское Ханство</h1>
-        <p class="lead">Погрузитесь в историю и культуру великого народа.</p>
-        <a href="history.html" class="btn btn-primary btn-lg">Узнать больше</a>
+        <h1 class="display-4">Welcome to the Kazakh Khanate</h1>
+        <p class="lead">Explore the rich history, leaders, and governance of the Kazakh Khanate.</p>
+        <a href="history.html" class="btn btn-lg">Explore Now</a>
+    </div>
+    <img src="images/konoha.jpg" alt="Kazakh History" class="d-none d-md-block">
+</div>
+
+<!-- Site Sections Overview -->
+<div class="site-sections">
+    <div class="container">
+        <h2 class="text-center my-5">Site Sections</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/history.jpg" class="card-img-top" alt="History">
+                    <div class="card-body">
+                        <h5 class="card-title">History</h5>
+                        <p class="card-text">Explore the formation and development of the Kazakh Khanate.</p>
+                        <a href="history.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/khans.jpg" class="card-img-top" alt="Khans">
+                    <div class="card-body">
+                        <h5 class="card-title">Khans</h5>
+                        <p class="card-text">Learn about the great khans and their contributions to history.</p>
+                        <a href="khans.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="images/gover.jpg" class="card-img-top" alt="Governance">
+                    <div class="card-body">
+                        <h5 class="card-title">Governance System</h5>
+                        <p class="card-text">Dive into the structure and features of the khanate's governance.</p>
+                        <a href="governance.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Обзор разделов -->
-<div class="container">
-    <h2 class="text-center my-5">Разделы сайта</h2>
-    <div class="row">
-        <!-- Карточка 1 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/history.jpg" class="card-img-top" alt="История">
-                <div class="card-body">
-                    <h5 class="card-title">История</h5>
-                    <p class="card-text">Изучите путь становления и развития Казахского Ханства.</p>
-                    <a href="history.html" class="btn btn-primary">Подробнее</a>
-                </div>
-            </div>
-        </div>
-        <!-- Карточка 2 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/khans.jpg" class="card-img-top" alt="Ханы">
-                <div class="card-body">
-                    <h5 class="card-title">Ханы</h5>
-                    <p class="card-text">Узнайте о великих ханах и их вкладе в историю.</p>
-                    <a href="khans.html" class="btn btn-primary">Подробнее</a>
-                </div>
-            </div>
-        </div>
-        <!-- Карточка 3 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/governance.jpg" class="card-img-top" alt="Управление">
-                <div class="card-body">
-                    <h5 class="card-title">Система управления</h5>
-                    <p class="card-text">Погрузитесь в структуру и особенности управления ханства.</p>
-                    <a href="governance.html" class="btn btn-primary">Подробнее</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Kazakh Khanate. All rights reserved.</p>
+</footer>
 
-<!-- Подключение скриптов Bootstrap -->
+<!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
